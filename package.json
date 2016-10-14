@@ -1,0 +1,20 @@
+{
+  "name": "demo-koa-router",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Theodo-UK/blog-koa-jwt.git"
+  },
+  "author": "brunog@theodo.co.uk & victord@theodo.co.uk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Theodo-UK/blog-koa-jwt/issues"
+  },
+  "homepage": "https://github.com/Theodo-UK/blog-koa-jwt#readme"
+}
