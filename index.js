@@ -1,9 +1,31 @@
 const app = require('koa')();
 const router = require('koa-router')();
+const koaBetterBody = require('koa-better-body');
+const customerService = require('./services/customerService');
+
+app.use(koaBetterBody());
 
 router.get('/', function *(next) {
-  this.body = 'Hello World!';
+  this.body = 'Welcome to the demo api of koa router';
 });
+
+router.get('/customer', function *(next) {
+  this.body = customerService.getCustomers();
+});
+
+router.get('/customer/:id', function *(next) {
+  if (customerService.getCustomer(parseInt(this.params.id))) {
+    this.body = customerService.getCustomer(parseInt(this.params.id));
+  }
+  else {
+    this.status = 404;
+    this.body = {"error": "There is no customer with that id"};
+  }
+})
+
+router.post('/customer', function *(next) {
+  this.body = customerService.postCustomer(JSON.parse(this.request.body));
+})
 
 app
   .use(router.routes())

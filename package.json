@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/Theodo-UK/blog-koa-jwt/issues"
   },
-  "homepage": "https://github.com/Theodo-UK/blog-koa-jwt#readme"
+  "homepage": "https://github.com/Theodo-UK/blog-koa-jwt#readme",
+  "dependencies": {
+    "koa-better-body": "^3.0.2"
+  }
 }
