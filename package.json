@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/Theodo-UK/blog-koa-jwt#readme",
   "dependencies": {
-    "koa-better-body": "^3.0.2"
+    "koa": "^1.2.4",
+    "koa-better-body": "^3.0.2",
+    "koa-jwt": "^1.2.0"
   }
 }

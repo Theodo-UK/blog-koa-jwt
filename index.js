@@ -1,6 +1,7 @@
 const app = require('koa')();
 const router = require('koa-router')();
 const koaBetterBody = require('koa-better-body');
+const jwt = require('./jwt.js');
 const customerService = require('./services/customerService');
 
 app.use(koaBetterBody());
@@ -23,7 +24,7 @@ router.get('/customer/:id', function *(next) {
   }
 })
 
-router.post('/customer', function *(next) {
+router.post('/customer', jwt, function *(next) {
   this.body = customerService.postCustomer(JSON.parse(this.request.body));
 })
 

@@ -28,5 +28,4 @@ module.exports = {
     customers.push(customer);
     return this.getCustomer(maxId);
   }
-
 }
