@@ -1,6 +1,7 @@
 const app = require('koa')();
 const router = require('koa-router')();
 const koaBetterBody = require('koa-better-body');
+
 const jwt = require('./jwt');
 const customerService = require('./services/customerService');
 const authenticate = require('./authenticate.js');
