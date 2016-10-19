@@ -20,10 +20,11 @@ module.exports = {
     return customers;
   },
   getCustomer: function(id) {
-    return customers.find(customer => customer.id === id);
+    return customers.find(customer => customer.id === parseInt(id) || customer.id === id);
   },
   postCustomer: function(customer) {
     maxId++;
+    customer = JSON.parse(customer);
     customer.id = maxId;
     customers.push(customer);
     return this.getCustomer(maxId);
