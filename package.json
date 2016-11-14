@@ -20,6 +20,7 @@
   "dependencies": {
     "koa": "^1.2.4",
     "koa-better-body": "^3.0.2",
-    "koa-jwt": "^1.2.0"
+    "koa-jwt": "^1.2.0",
+    "koa-router": "^5.4.0"
   }
 }
