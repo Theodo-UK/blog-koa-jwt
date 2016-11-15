@@ -24,7 +24,6 @@ module.exports = {
   },
   postCustomer: function(customer) {
     maxId++;
-    customer = JSON.parse(customer);
     customer.id = maxId;
     customers.push(customer);
     return this.getCustomer(maxId);

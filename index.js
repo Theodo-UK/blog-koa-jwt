@@ -6,17 +6,17 @@ const customerService = require('./services/customerService');
 const authenticate = require('./middlewares/authenticate.js');
 const jwt = require('./middlewares/jwt');
 
-app.use(koaBetterBody());
+app.use(koaBetterBody({fields: 'body'}));
 
-router.get('/', function *(next) {
+router.get('/', function *() {
   this.body = 'Welcome to the demo api of koa router';
 });
 
-router.get('/customer', function *(next) {
+router.get('/customer', function *() {
   this.body = customerService.getCustomers();
 });
 
-router.get('/customer/:id', function *(next) {
+router.get('/customer/:id', function *() {
   if (customerService.getCustomer(this.params.id)) {
     this.body = customerService.getCustomer(this.params.id);
   }
@@ -26,11 +26,11 @@ router.get('/customer/:id', function *(next) {
   }
 });
 
-router.post('/customer', jwt, function *(next) {
+router.post('/customer', jwt, function *() {
   this.body = customerService.postCustomer(this.request.body);
 });
 
-router.post('/login', function *(next) {
+router.post('/login', function *() {
   authenticate(this);
 });
 
