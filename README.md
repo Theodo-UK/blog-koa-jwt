@@ -1,5 +1,6 @@
 # blog-koa-jwt
-**Description**
+## Description
+
 This repository contains a an example code for an api with koa-router and protected by koa-jwt.
 
 - Public routes:
@@ -15,7 +16,8 @@ To be able to access the protected route, a user should:
 - Send a post request on /login with the good password to get a jwt token in the response. Payload: `{"password": "password"}`
 - Set the Authorization header to `Bearer <token>` before making a request on a protected route.
 
-**Instalation**
+## Instalation
+
 After Cloning the repository, run:
 ```
 npm install
